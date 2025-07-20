@@ -17,7 +17,7 @@ def main():
         player1.draw(screen)
         
         pygame.display.flip()
-        
+        player1.update(dt)
         dt =  (clock.tick(60)/ 1000 )
         
         for event in pygame.event.get():
