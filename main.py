@@ -12,17 +12,19 @@ def main():
     y = SCREEN_HEIGHT / 2
     player1 = Player(x,y)
     while True:
-        screen.fill(color=00000)
-        
-        player1.draw(screen)
-        
-        pygame.display.flip()
-        player1.update(dt)
-        dt =  (clock.tick(60)/ 1000 )
-        
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+        
+        player1.update(dt)
+         
+        screen.fill("black")
+        player1.draw(screen)
+        pygame.display.flip()
+       
+        dt =  (clock.tick(60)/ 1000 )
+        
+        
        
         
 if __name__ == "__main__":
